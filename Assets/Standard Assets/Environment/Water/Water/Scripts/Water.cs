@@ -194,7 +194,7 @@ namespace UnityStandardAssets.Water
 
         // This just sets up some matrices in the material; for really
         // old cards to make water texture scroll.
-        void Update()
+        void LateUpdate()
         {
             if (!GetComponent<Renderer>())
             {
