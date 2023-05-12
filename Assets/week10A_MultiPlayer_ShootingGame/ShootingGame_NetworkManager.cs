@@ -6,16 +6,14 @@ using Photon.Realtime;
 
 public class ShootingGame_NetworkManager : MonoBehaviourPunCallbacks
 {
-
-    public string PlayerName;
-    string PlayerPrefabName = "MultiPlayer_Photon_ShootingGame_Player";
+    public GameObject PlayerPrefab;
 
     void Start()
     {
         Screen.SetResolution(800, 600, false); // fullscreen = false
 
         // 게임에서 사용할 사용자의 이름을 설정함
-        if (string.IsNullOrEmpty(PlayerName)) PlayerName = "Player " + Random.Range(0, 1000);
+        string PlayerName = "Player " + Random.Range(0, 1000);
         PhotonNetwork.NickName = PlayerName;
         print("Player Name: " + PhotonNetwork.NickName);
 
@@ -39,6 +37,6 @@ public class ShootingGame_NetworkManager : MonoBehaviourPunCallbacks
     {
         print(PhotonNetwork.NickName + " has joined Room");
         Vector2 originPos = Random.insideUnitCircle * 10.0f;
-        PhotonNetwork.Instantiate(PlayerPrefabName, new Vector3(originPos.x, 0, originPos.y), Quaternion.identity);
+        PhotonNetwork.Instantiate(PlayerPrefab.name, new Vector3(originPos.x, 0, originPos.y), Quaternion.identity);
     }
 }
