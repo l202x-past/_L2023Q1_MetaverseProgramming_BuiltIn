@@ -26,7 +26,7 @@ public class ShootingGame_PlayerShoot : MonoBehaviourPunCallbacks
         }
     }
 
-    [PunRPC] //PUN Remote Procedure Calls. Calls Remote Client's Medthod
+    [PunRPC] //RPC = Remote Procedure Calls. Calls Remote Clone's Method
     void Shoot()
     {
         Vector3 BulletPos = Gun.position + Gun.forward;

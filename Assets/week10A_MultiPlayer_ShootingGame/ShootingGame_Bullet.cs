@@ -10,11 +10,12 @@ public class ShootingGame_Bullet : MonoBehaviour
         print("bullet hits " + other.gameObject.name);
         if (other.gameObject.tag == "Player")
         {
-            GetComponent<Collider>().enabled = false;
-            print("bullet collider disabled");
-            print("damage " + other.gameObject.name);
             PhotonView pv = other.GetComponent<PhotonView>();
-            pv.RPC("Damage", RpcTarget.AllBuffered, 0.1f);
+            if (!pv.IsMine)
+            {
+                print("damage " + other.gameObject.name);
+                pv.RPC("Damage", RpcTarget.AllBuffered, 0.1f);
+            }            
         }
         Destroy(gameObject);
     }
