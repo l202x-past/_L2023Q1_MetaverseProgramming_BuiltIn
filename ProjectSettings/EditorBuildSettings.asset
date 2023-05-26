@@ -6,12 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/week10A_MultiPlayer_ShootingGame/ShootingGame.unity
-    guid: 5aaf433a80d07c54c9494b9920bc6b9f
-  - enabled: 0
-    path: Assets/week12A_ChattingSystem/ChattingSystem_Connect.unity
-    guid: f6c143b40e959114c90db56c85afea22
-  - enabled: 0
-    path: Assets/week12A_ChattingSystem/ChattingSystem_Chat.unity
-    guid: 7fcfccc1bf3e3d14c8fe0b8f9b5339d6
+    path: Assets/week12_ChatingSystem_Simple/ChattingSystem_Simple_Connect.unity
+    guid: 68b2ec9e209734b408aa7fd67cbc0456
+  - enabled: 1
+    path: Assets/week12_ChatingSystem_Simple/ChattingSystem_Simple_Chat.unity
+    guid: a6bc1bee6062f754383393515de6d786
   m_configObjects: {}
