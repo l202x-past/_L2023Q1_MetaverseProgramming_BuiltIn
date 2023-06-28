@@ -7,7 +7,7 @@ public class ShootingGame_PlayerShoot : MonoBehaviourPunCallbacks
 {
     public GameObject Bullet;
     public Transform Gun;
-    float speed = 30f;
+    public float speed = 3f;
 
     void Update()
     {
@@ -29,7 +29,7 @@ public class ShootingGame_PlayerShoot : MonoBehaviourPunCallbacks
     [PunRPC] //RPC = Remote Procedure Calls. Calls Remote Clone's Method
     void Shoot()
     {
-        Vector3 BulletPos = Gun.position + Gun.forward;
+        Vector3 BulletPos = Gun.position + Gun.forward * 2;
         Quaternion BulletRot = Gun.rotation;
         Vector3 BulletSpeed = Gun.forward * speed;
 
